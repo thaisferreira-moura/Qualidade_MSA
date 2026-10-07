@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard OEE - Quality</title>
+  <link rel="stylesheet" href="./qualidade.css">
+  <!-- Ícones do FontAwesome para os menus e alertas -->
+   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-container">
+    
+    <!-- Cabeçalho Superior -->
+    <header class="header">
+      <div class="logo-section">
+        <span class="brand-logo">altus</span>
+      </div>
+      <div class="project-info">
+        <div><strong>Project:</strong> What is OEE</div>
+        <div><strong>Display:</strong> Quality</div>
+      </div>
+      <div class="header-right">
+        <div class="user-profile">
+          <i class="fa-solid fa-user-group"></i>
+          <span>GUEST</span>
+        </div>
+        <div class="time-info">
+          <i class="fa-regular fa-calendar-days"></i>
+          <div>
+            <div>09:02:11</div>
+            <div>10/07/2026</div>
+          </div>
+        </div>
+        <button class="power-btn"><i class="fa-solid fa-power-off"></i></button>
+      </div>
+    </header>
+
+    <!-- Corpo Principal com Sidebar e Conteúdo -->
+    <div class="main-layout">
+      
+      <!-- Menu Lateral -->
+      <aside class="sidebar">
+        <nav class="menu">
+          <a href="#" class="menu-item">
+            <i class="fa-solid fa-house"></i>
+            <span>What is OEE ?</span>
+          </a>
+          <a href="#" class="menu-item">
+            <i class="fa-solid fa-wine-bottle"></i>
+            <span>Bottling Line</span>
+          </a>
+          <a href="#" class="menu-item">
+            <i class="fa-solid fa-stopwatch"></i>
+            <span>Availability</span>
+          </a>
+          <a href="#" class="menu-item">
+            <i class="fa-solid fa-gear"></i>
+            <span>Performance</span>
+          </a>
+          <a href="#" class="menu-item active">
+            <i class="fa-solid fa-bullseye"></i>
+            <span>Quality</span>
+          </a>
+          <a href="#" class="menu-item">
+            <i class="fa-solid fa-file-lines"></i>
+            <span>Reporting</span>
+          </a>
+        </nav>
+        <button class="collapse-btn">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Collapse Menu</span>
+        </button>
+      </aside>
+
+      <!-- Área de Conteúdo Principal -->
+      <main class="content-area">
+        
+        <!-- Fileira de Cards com Métricas -->
+        <section class="metrics-row">
+          
+          <!-- Card 1: Porcentagem com barra/slider -->
+          <div class="card metric-card">
+            <h2 class="card-title">Quality</h2>
+            <div class="percentage-display">
+              <span class="divider">|</span>
+              <span class="value">90%</span>
+              <div class="progress-bar-container">
+                <div class="progress-bar" style="width: 90%;"></div>
+                <div class="slider-thumb"></div>
+              </div>
+            </div>
+            <p class="formula">
+              <span class="divider">|</span>
+              Quality = Good Pieces ( 1,037 ) / Total Pieces ( 1,154 )
+            </p>
+          </div>
+
+          <!-- Card 2: Gráfico em Anel (Donut Chart) -->
+          <div class="card donut-card">
+            <div class="donut-chart" style="--percent: 90;">
+              <span class="donut-text">90%</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Gráfico de Barras/Tempos -->
+          <div class="card timeline-card">
+            <div class="timeline-row">
+              <span class="time-label">480 min</span>
+              <div class="bar-container">
+                <div class="bar bar-blue" style="width: 100%;">Total Shift Operating Time</div>
+              </div>
+            </div>
+            <div class="timeline-row">
+              <span class="time-label">460 min</span>
+              <div class="bar-container">
+                <div class="bar bar-blue" style="width: 95%;">Planned Shift Operating Time</div>
+                <div class="bar bar-orange" style="width: 5%;"></div>
+              </div>
+              <span class="loss-label">0 min</span>
+            </div>
+            <div class="timeline-row">
+              <span class="time-label">430 min</span>
+              <div class="bar-container">
+                <div class="bar bar-blue" style="width: 89%;">Operating Time</div>
+                <div class="bar bar-orange" style="width: 11%;"></div>
+              </div>
+              <span class="loss-label">30 min</span>
+            </div>
+            <div class="timeline-row">
+              <span class="time-label">365 min</span>
+              <div class="bar-container">
+                <div class="bar bar-blue" style="width: 76%;">NET Operating Time</div>
+                <div class="bar bar-orange" style="width: 13%;"></div>
+              </div>
+              <span class="loss-label">65 min</span>
+            </div>
+            <div class="timeline-row">
+              <span class="time-label">89.86 %</span>
+              <div class="bar-container">
+                <div class="bar bar-blue" style="width: 68%;">% of Good Parts</div>
+                <div class="bar bar-orange" style="width: 8%;"></div>
+              </div>
+              <span class="loss-label">10.14 %</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Fileira Secundária (Perdas & Análise 3D/Esquema) -->
+        <section class="details-row">
+          
+          <!-- Lista de Perdas (Quality Losses) -->
+          <div class="card losses-card">
+            <h2>Quality Losses</h2>
+            
+            <div class="loss-group">
+              <h3 class="group-title startup">Startup Rejects</h3>
+              <ul>
+                <li><i class="fa-solid fa-circle-minus"></i> Scrap</li>
+                <li><i class="fa-solid fa-circle-minus"></i> Rework</li>
+                <li><i class="fa-solid fa-circle-minus"></i> In-Process Damage</li>
+                <li><i class="fa-solid fa-circle-minus"></i> In-Process Expiration</li>
+                <li><i class="fa-solid fa-circle-minus"></i> Incorrect Assembly</li>
+              </ul>
+            </div>
+
+            <div class="loss-group">
+              <h3 class="group-title production">Production Rejects</h3>
+              <ul>
+                <li><i class="fa-solid fa-circle-minus"></i> Scrap</li>
+                <li><i class="fa-solid fa-circle-minus"></i> Rework</li>
+                <li><i class="fa-solid fa-circle-minus"></i> In-Process Damage</li>
+                <li><i class="fa-solid fa-circle-minus"></i> In-Process Expiration</li>
+                <li><i class="fa-solid fa-circle-minus"></i> Incorrect Assembly</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Diagrama / Visualização da Linha de Produção -->
+          <div class="card machine-card">
+            <div class="info-tooltip-header">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <span>Mouseover for more information</span>
+            </div>
+            
+            <div class="machine-viewport">
+              <!-- Imagem do maquinário industrial -->
+              <img src="caminho-para-sua-imagem-da-maquina.png" alt="Industrial Line" class="machine-img">
+
+              <!-- Tooltip de Alerta / Pop-up informativo -->
+              <div class="annotation-box" style="top: 20%; left: 35%;">
+                <div class="annotation-header">Scrap</div>
+                <div class="annotation-body">Damaged pieces during startup</div>
+              </div>
+
+              <!-- Marcadores de Aviso (Ícones triangulares) -->
+              <div class="warning-marker" style="top: 45%; left: 37%;">!</div>
+              <div class="warning-marker" style="top: 60%; left: 48%;">!</div>
+              <div class="warning-marker" style="top: 75%; left: 62%;">!</div>
+              <div class="warning-marker" style="top: 55%; left: 71%;">!</div>
+            </div>
+          </div>
+
+        </section>
+
+      </main>
+
+    </div>
+  </div>
+</body>
+</html>
