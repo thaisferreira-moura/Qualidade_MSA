@@ -380,3 +380,64 @@ body {
   line-height: 22px;
   cursor: pointer;
 }
+
+.quality-inputs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-group label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.input-group input {
+    width: 110px;
+    padding: 8px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #16a34a;
+    box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.15);
+}
+
+.progress-bar-container {
+    position: relative;
+    flex: 1;
+    height: 16px;
+    background: #1e293b;
+    border-radius: 8px;
+    overflow: visible;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #16a34a;
+    border-radius: 8px;
+    transition: width 0.3s ease;
+}
+
+.slider-thumb {
+    position: absolute;
+    top: -5px;
+    width: 26px;
+    height: 26px;
+    background: #fff;
+    border: 3px solid #16a34a;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+    transition: left 0.3s ease;
+}
