@@ -1,77 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard OEE - Quality</title>
+  <title>Qualidade</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Ícones do FontAwesome para os menus e alertas -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-  <div class="app-container">
-    
-    <!-- Cabeçalho Superior -->
-    <header class="header">
-      <div class="logo-section">
-        <span class="brand-logo">altus</span>
-      </div>
-      <div class="project-info">
-        <div><strong>Project:</strong> What is OEE</div>
-        <div><strong>Display:</strong> Quality</div>
-      </div>
-      <div class="header-right">
-        <div class="user-profile">
-          <i class="fa-solid fa-user-group"></i>
-          <span>GUEST</span>
-        </div>
-        <div class="time-info">
-          <i class="fa-regular fa-calendar-days"></i>
-          <div>
-            <div>09:02:11</div>
-            <div>10/07/2026</div>
-          </div>
-        </div>
-        <button class="power-btn"><i class="fa-solid fa-power-off"></i></button>
-      </div>
-    </header>
-
-    <!-- Corpo Principal com Sidebar e Conteúdo -->
-    <div class="main-layout">
-      
-      <!-- Menu Lateral -->
-      <aside class="sidebar">
-        <nav class="menu">
-          <a href="#" class="menu-item">
-            <i class="fa-solid fa-house"></i>
-            <span>What is OEE ?</span>
-          </a>
-          <a href="#" class="menu-item">
-            <i class="fa-solid fa-wine-bottle"></i>
-            <span>Bottling Line</span>
-          </a>
-          <a href="#" class="menu-item">
-            <i class="fa-solid fa-stopwatch"></i>
-            <span>Availability</span>
-          </a>
-          <a href="#" class="menu-item">
-            <i class="fa-solid fa-gear"></i>
-            <span>Performance</span>
-          </a>
-          <a href="#" class="menu-item active">
-            <i class="fa-solid fa-bullseye"></i>
-            <span>Quality</span>
-          </a>
-          <a href="#" class="menu-item">
-            <i class="fa-solid fa-file-lines"></i>
-            <span>Reporting</span>
-          </a>
-        </nav>
-        <button class="collapse-btn">
-          <i class="fa-solid fa-arrow-left"></i>
-          <span>Collapse Menu</span>
-        </button>
-      </aside>
 
       <!-- Área de Conteúdo Principal -->
       <main class="content-area">
@@ -81,11 +14,11 @@
           
           <!-- Card 1: Porcentagem com barra/slider -->
           <div class="card metric-card">
-    <h2 class="card-title">Quality</h2>
+    <h2 class="card-title">Métricas</h2>
 
     <div class="quality-inputs">
         <div class="input-group">
-            <label for="goodPieces">Peças boas</label>
+            <label for="goodPieces">Peças Aprovadas</label>
             <input 
                 type="number" 
                 id="goodPieces" 
@@ -129,7 +62,7 @@
     <p class="formula">
         <span class="divider">|</span>
 
-        Quality =
+        Qualidade =
         <span id="goodPiecesText">1.037</span>
         /
         <span id="totalPiecesText">1.154</span>
@@ -148,13 +81,13 @@
             <div class="timeline-row">
               <span class="time-label">480 min</span>
               <div class="bar-container">
-                <div class="bar bar-blue" style="width: 100%;">Total Shift Operating Time</div>
+                <div class="bar bar-blue" style="width: 100%;">Tempo total de operação do turno</div>
               </div>
             </div>
             <div class="timeline-row">
               <span class="time-label">460 min</span>
               <div class="bar-container">
-                <div class="bar bar-blue" style="width: 95%;">Planned Shift Operating Time</div>
+                <div class="bar bar-blue" style="width: 95%;">Tempo de operação planejado do turno</div>
                 <div class="bar bar-orange" style="width: 5%;"></div>
               </div>
               <span class="loss-label">0 min</span>
@@ -162,7 +95,7 @@
             <div class="timeline-row">
               <span class="time-label">430 min</span>
               <div class="bar-container">
-                <div class="bar bar-blue" style="width: 89%;">Operating Time</div>
+                <div class="bar bar-blue" style="width: 89%;">Tempo de operação</div>
                 <div class="bar bar-orange" style="width: 11%;"></div>
               </div>
               <span class="loss-label">30 min</span>
@@ -170,7 +103,7 @@
             <div class="timeline-row">
               <span class="time-label">365 min</span>
               <div class="bar-container">
-                <div class="bar bar-blue" style="width: 76%;">NET Operating Time</div>
+                <div class="bar bar-blue" style="width: 76%;">Tempo de operação líquido</div>
                 <div class="bar bar-orange" style="width: 13%;"></div>
               </div>
               <span class="loss-label">65 min</span>
@@ -178,7 +111,7 @@
             <div class="timeline-row">
               <span class="time-label">89.86 %</span>
               <div class="bar-container">
-                <div class="bar bar-blue" style="width: 68%;">% of Good Parts</div>
+                <div class="bar bar-blue" style="width: 68%;">% de peças boas</div>
                 <div class="bar bar-orange" style="width: 8%;"></div>
               </div>
               <span class="loss-label">10.14 %</span>
@@ -191,27 +124,28 @@
           
           <!-- Lista de Perdas (Quality Losses) -->
           <div class="card losses-card">
-            <h2>Quality Losses</h2>
+            <h2>Perdas de Produção</h2>
             
             <div class="loss-group">
-              <h3 class="group-title startup">Startup Rejects</h3>
+              <h3 class="group-title startup">perdas no começo</h3>
               <ul>
-                <li><i class="fa-solid fa-circle-minus"></i> Scrap</li>
-                <li><i class="fa-solid fa-circle-minus"></i> Rework</li>
-                <li><i class="fa-solid fa-circle-minus"></i> In-Process Damage</li>
-                <li><i class="fa-solid fa-circle-minus"></i> In-Process Expiration</li>
-                <li><i class="fa-solid fa-circle-minus"></i> Incorrect Assembly</li>
+                <li><i class="fa-solid fa-circle-minus"></i> Peças fora de especificação no startup</li>
+                <li><i class="fa-solid fa-circle-minus"></i> Dimensão incorreta</li>
+                <li><i class="fa-solid fa-circle-minus"></i> Montagem incorreta</li>
+                <li><i class="fa-solid fa-circle-minus"></i> Defeito de acabamento</li>
+                <li><i class="fa-solid fa-circle-minus"></i> Peças danificadas durante o ajuste</li>
               </ul>
             </div>
 
             <div class="loss-group">
-              <h3 class="group-title production">Production Rejects</h3>
+              <h3 class="group-title production">Pperdas durante a produção</h3>
               <ul>
-                <li><i class="fa-solid fa-circle-minus"></i> Scrap</li>
-                <li><i class="fa-solid fa-circle-minus"></i> Rework</li>
-                <li><i class="fa-solid fa-circle-minus"></i> In-Process Damage</li>
-                <li><i class="fa-solid fa-circle-minus"></i> In-Process Expiration</li>
-                <li><i class="fa-solid fa-circle-minus"></i> Incorrect Assembly</li>
+                <li><i class="fa-solid fa-circle-minus"></i> Refugo</li>
+                <li><i class="fa-solid fa-circle-minus"></i> Retrabalho</li>
+                <li><i class="fa-solid fa-circle-minus"></i> Peça danificada durante o processo</li>
+                <li><i class="fa-solid fa-circle-minus"></i> Defeito dimensional</li>
+                <li><i class="fa-solid fa-circle-minus"></i> Defeito de acabamento</li>
+                <li><i class="fa-solid fa-circle-minus"></i> Problema de matéria-prima</li>
               </ul>
             </div>
           </div>
