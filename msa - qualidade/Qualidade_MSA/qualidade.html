@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qualidade</title>
+  <link rel="stylesheet" href="style.css">
+
+      <!-- Área de Conteúdo Principal -->
+      <main class="content-area">
+        
+        <!-- Fileira de Cards com Métricas -->
+        <section class="metrics-row">
+          
+          <!-- Card 1: Porcentagem com barra/slider -->
+          <div class="card metric-card">
+    <h2 class="card-title">Métricas</h2>
+
+    <div class="quality-inputs">
+        <div class="input-group">
+            <label for="goodPieces">Peças Aprovadas</label>
+            <input 
+                type="number" 
+                id="goodPieces" 
+                value="1037" 
+                min="0"
+                oninput="calcularQualidade()"
+            >
+        </div>
+
+        <div class="input-group">
+            <label for="totalPieces">Total de peças</label>
+            <input 
+                type="number" 
+                id="totalPieces" 
+                value="1154" 
+                min="0"
+                oninput="calcularQualidade()"
+            >
+        </div>
+    </div>
+
+    <div class="percentage-display">
+        <span class="divider">|</span>
+
+        <span class="value" id="qualityValue">90%</span>
+
+        <div class="progress-bar-container">
+            <div 
+                class="progress-bar" 
+                id="qualityProgress"
+                style="width: 90%;">
+            </div>
+
+            <div 
+                class="slider-thumb" 
+                id="qualityThumb">
+            </div>
+        </div>
+    </div>
+
+    <p class="formula">
+        <span class="divider">|</span>
+
+        Qualidade =
+        <span id="goodPiecesText">1.037</span>
+        /
+        <span id="totalPiecesText">1.154</span>
+    </p>
+</div>
+
+          <!-- Card 2: Gráfico em Anel (Donut Chart) -->
+          <div class="card donut-card">
+            <div class="donut-chart" style="--percent: 90;">
+              <span class="donut-text">90%</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Gráfico de Barras/Tempos -->
+          <div class="card timeline-card">
+            <div class="timeline-row">
+              <span class="time-label">480 min</span>
+              <div class="bar-container">
+                <div class="bar bar-blue" style="width: 100%;">Tempo total de operação do turno</div>
+              </div>
+            </div>
+            <div class="timeline-row">
+              <span class="time-label">460 min</span>
+              <div class="bar-container">
+                <div class="bar bar-blue" style="width: 95%;">Tempo de operação planejado do turno</div>
+                <div class="bar bar-orange" style="width: 5%;"></div>
+              </div>
+              <span class="loss-label">0 min</span>
+            </div>
+            <div class="timeline-row">
+              <span class="time-label">430 min</span>
+              <div class="bar-container">
+                <div class="bar bar-blue" style="width: 89%;">Tempo de operação</div>
+                <div class="bar bar-orange" style="width: 11%;"></div>
+              </div>
+              <span class="loss-label">30 min</span>
+            </div>
+            <div class="timeline-row">
+              <span class="time-label">365 min</span>
+              <div class="bar-container">
+                <div class="bar bar-blue" style="width: 76%;">Tempo de operação líquido</div>
+                <div class="bar bar-orange" style="width: 13%;"></div>
+              </div>
+              <span class="loss-label">65 min</span>
+            </div>
+            <div class="timeline-row">
+              <span class="time-label">89.86 %</span>
+              <div class="bar-container">
+                <div class="bar bar-blue" style="width: 68%;">% de peças boas</div>
+                <div class="bar bar-orange" style="width: 8%;"></div>
+              </div>
+              <span class="loss-label">10.14 %</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Fileira Secundária (Perdas & Análise 3D/Esquema) -->
+        <section class="details-row">
+          
+          <!-- Lista de Perdas (Quality Losses) -->
+          <div class="card losses-card">
+            <h2>Perdas de Produção</h2>
+            
+            <div class="loss-group">
+              <h3 class="group-title startup">Perdas no começo</h3>
+              <ul>
+                <li><i class="fa-solid fa-circle-minus"></i> Peças fora de especificação no startup</li>
+                <li><i class="fa-solid fa-circle-minus"></i> Dimensão incorreta</li>
+                <li><i class="fa-solid fa-circle-minus"></i> Montagem incorreta</li>
+                <li><i class="fa-solid fa-circle-minus"></i> Defeito de acabamento</li>
+                <li><i class="fa-solid fa-circle-minus"></i> Peças danificadas durante o ajuste</li>
+              </ul>
+            </div>
+
+            <div class="loss-group">
+              <h3 class="group-title production">Perdas durante a produção</h3>
+              <ul>
+                <li><i class="fa-solid fa-circle-minus"></i> Refugo</li>
+                <li><i class="fa-solid fa-circle-minus"></i> Retrabalho</li>
+                <li><i class="fa-solid fa-circle-minus"></i> Peça danificada durante o processo</li>
+                <li><i class="fa-solid fa-circle-minus"></i> Defeito dimensional</li>
+                <li><i class="fa-solid fa-circle-minus"></i> Defeito de acabamento</li>
+                <li><i class="fa-solid fa-circle-minus"></i> Problema de matéria-prima</li>
+              </ul>
+            </div>
+          </div>
+<script src="qualidade.js"></script>
+</body>
+</html>
