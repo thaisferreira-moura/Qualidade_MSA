@@ -1,8 +1,8 @@
-# Quality MSA — Dashboard de Qualidade Industrial
+# Qualidade MSA — Dashboard de Qualidade Industrial
 
 ## Sobre o projeto
 
-O **Quality MSA** é um dashboard desenvolvido para auxiliar no acompanhamento de indicadores de qualidade e produção industrial, centralizando informações importantes em uma interface visual, intuitiva e de fácil utilização.
+O **Qualidade MSA** é um dashboard desenvolvido para auxiliar no acompanhamento de indicadores de qualidade e produção industrial, centralizando informações importantes em uma interface visual, intuitiva e de fácil utilização.
 
 A proposta é facilitar o monitoramento dos resultados da produção, a identificação de perdas e o acompanhamento de peças, contribuindo para uma tomada de decisão mais rápida e eficiente.
 
@@ -51,13 +51,13 @@ quality_msa/
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/thaisferreira-moura/quality_msa.git
+   git clone https://github.com/thaisferreira-moura/Qualidade_MSA.git
    ```
 
 2. Acesse a pasta do projeto:
 
    ```bash
-   cd quality_msa
+   cd qualidade_msa
    ```
 
 3. Abra o arquivo `index.html` no navegador ou utilize a extensão **Live Server** no Visual Studio Code.
@@ -88,4 +88,4 @@ Desenvolvido por **Thais Ferreira de Moura**, como projeto voltado ao acompanham
 
 ---
 
-*Quality MSA — Transformando dados de produção em informações para decisões melhores.*
+*Qualidade MSA — Transformando dados de produção em informações para decisões melhores.*
