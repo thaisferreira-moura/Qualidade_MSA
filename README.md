@@ -80,7 +80,7 @@ quality_msa/
 
 ## Status do projeto
 
-**Em desenvolvimento.**
+**Em desenvolvimento.**, parte do projeto MSA
 
 ## Autoria
 
